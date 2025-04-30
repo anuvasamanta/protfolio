@@ -23,7 +23,7 @@ export default function HeroSection() {
     >
       <Container maxWidth="md">
         <Typography variant="h2" component="h1" gutterBottom>
-          Hi, I'm Anuva Samanta
+          Hi, I am Anuva Samanta
         </Typography>
         <Typography variant="h4" component="h2" gutterBottom>
           Front-end Developer

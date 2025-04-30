@@ -55,6 +55,8 @@ import {
         setTimeout(() => setSubmitted(false), 5000);
       } catch (err) {
         setError('Failed to send message. Please try again later.');
+        console.log(err);
+        
       }
     };
     if (!isClient) {
@@ -97,7 +99,7 @@ import {
                 Contact Information
               </Typography>
               <Typography variant="body1" paragraph>
-                Feel free to reach out if you're looking for a developer, have a question, 
+                Feel free to reach out if you are looking for a developer, have a question, 
                 or just want to connect.
               </Typography>
   

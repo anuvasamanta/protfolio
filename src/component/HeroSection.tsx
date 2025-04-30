@@ -1,6 +1,6 @@
-'use client'
-import { Box, Typography, Button, Container } from '@mui/material';
-import { useEffect, useState } from 'react';
+"use client"
+import { Box, Typography, Button, Container } from "@mui/material";
+import { useEffect, useState } from "react";
 
 export default function HeroSection() {
     const [isClient, setIsClient] = useState(false);
@@ -14,11 +14,11 @@ export default function HeroSection() {
     <Box 
       id="home"
       sx={{
-        height: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        background: 'linear-gradient(135deg, #3f51b5 0%, #2196f3 100%)',
-        color: 'white',
+        height: "100vh",
+        display: "flex",
+        alignItems: "center",
+        background: "linear-gradient(135deg, #3f51b5 0%, #2196f3 100%)",
+        color: "white",
       }}
     >
       <Container maxWidth="md">

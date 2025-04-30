@@ -9,20 +9,20 @@ import {
     Paper,
     Alert,
     Stack
-  } from '@mui/material';
-  import EmailIcon from '@mui/icons-material/Email';
-  import SendIcon from '@mui/icons-material/Send';
-  import LinkedInIcon from '@mui/icons-material/LinkedIn';
-  import { useEffect, useState } from 'react';
+  } from "@mui/material";
+  import EmailIcon from "@mui/icons-material/Email";
+  import SendIcon from "@mui/icons-material/Send";
+  import LinkedInIcon from "@mui/icons-material/LinkedIn";
+  import { useEffect, useState } from "react";
   
   export default function ContactSection() {
     const [formData, setFormData] = useState({
-      name: '',
-      email: '',
-      message: ''
+      name:"",
+      email: "",
+      message: ""
     });
     const [submitted, setSubmitted] = useState(false);
-    const [error, setError] = useState('');
+    const [error, setError] = useState("");
     const [isClient, setIsClient] = useState(false);
     useEffect(()=>{
       setIsClient(true)
@@ -37,24 +37,24 @@ import {
   
     const handleSubmit = async (e: React.FormEvent) => {
       e.preventDefault();
-      setError('');
+      setError("");
       
       // Basic validation
       if (!formData.name || !formData.email || !formData.message) {
-        setError('Please fill in all fields');
+        setError("Please fill in all fields");
         return;
       }
   
       try {
         // Replace with your actual form submission logic
-        console.log('Form submitted:', formData);
+        console.log("Form submitted:", formData);
         setSubmitted(true);
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: "", email: "", message: "" });
         
         // Reset submission status after 5 seconds
         setTimeout(() => setSubmitted(false), 5000);
       } catch (err) {
-        setError('Failed to send message. Please try again later.');
+        setError("Failed to send message. Please try again later.");
         console.log(err);
         
       }
@@ -67,7 +67,7 @@ import {
         id="contact"
         sx={{
           py: 8,
-          bgcolor: 'background.default',
+          bgcolor: "background.default",
         }}
       >
         <Container maxWidth="md">
@@ -79,14 +79,14 @@ import {
             sx={{
               fontWeight: 700,
               mb: 6,
-              position: 'relative',
-              '&:after': {
-                content: '""',
-                display: 'block',
-                width: '80px',
-                height: '4px',
-                backgroundColor: 'primary.main',
-                margin: '20px auto 0',
+              position: "relative",
+              "&:after": {
+                content: "",
+                display: "block",
+                width: "80px",
+                height: "4px",
+                backgroundColor: "primary.main",
+                margin: "20px auto 0",
               }
             }}
           >
@@ -103,7 +103,7 @@ import {
                 or just want to connect.
               </Typography>
   
-              <Box component="address" sx={{ mt: 4, fontStyle: 'normal' }}>
+              <Box component="address" sx={{ mt: 4, fontStyle: "normal"}}>
                 <Typography variant="body1" sx={{ mb: 2 }}>
                   <strong>Email:</strong>samantaanuva1@gmail.com
                 </Typography>
@@ -190,7 +190,7 @@ import {
                       variant="contained"
                       size="large"
                       endIcon={<SendIcon />}
-                      sx={{ alignSelf: 'flex-end' }}
+                      sx={{ alignSelf: "flex-end" }}
                     >
                       Send Message
                     </Button>
